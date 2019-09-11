@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Кафе Гладиатор</title>
+	</head>
+	
+	<style>
+		body {
+			margin: 0px;
+		}
+		
+		header ul {
+		
+			padding-bottom: 2px;
+		}
+		
+		header li {
+			list-style-type: none;
+			display: inline;
+			margin-right: 30px;
+		}
+		
+		header li:hover {
+			padding-bottom: 17px;
+			border-bottom: 3px solid black;
+		}
+		
+		header a {
+			font-size: 14px;
+			color: black;
+			text-decoration: none;
+		}
+		
+		header .selected {
+			padding-bottom: 17px;
+			border-bottom: 3px solid black;
+		}
+		
+		#main-info-block {
+			margin-left: 40px;
+			
+			margin-top: 20px;
+		}
+		
+		#main-info-block .name {
+			font-size: 40px;
+			
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		
+		#main-info-block .info ul {
+			padding: 0px;
+		}
+		
+		#main-info-block .info li {
+			display: inline-block;
+			
+			list-style-type: none;
+		}
+		
+		#main-info-block location {
+			width: 13px;
+			
+			margin-left: 2px;
+			
+			margin-right: 4px;
+		}
+		
+		#main-info-block a {
+			text-decoration: none;
+			
+			font-size: 14px;
+		}
+		
+		#main-info-block table { 
+		
+			border: 2px solid black; 
+			padding: 4px;
+			
+			width: 476px; 
+			border: 1px solid #6f6a84; 
+			border-collapse: collapse;
+		}
+		.info-block {
+			margin-top: 30px;
+		}
+		
+		#main-info-block table th {
+			border-right: 1px solid #6f6a84;
+			
+			padding-bottom: 4px;
+			padding-top: 4px;
+		}
+		
+		.info-block table .selected {
+			background-color: #f9f967;
+		}
+		
+		.info-block table a {
+			color: black;
+		}
+		
+		.comments {
+			margin-top: 8px;
+		}
+		
+		.comments .count {
+			font-size: 22px;
+			margin-bottom: 0px;
+		}
+		
+		.comments .mark {
+			margin-left: 20px;
+			background-color: #f9f967;
+			padding-left: 6px;
+			padding-right: 6px;
+			font-size: 22px;
+		}
+		.data {
+			color: #6f6a84;
+		}
+		
+		.comments p {
+			
+			margin-bottom: 0px;
+			display: inline-block;
+			
+			margin-bottom: 10px;
+		}
+		
+		.comment {
+			padding-top: 6px;
+			font-size: 16px;
+			width: 480px;
+			
+			margin-bottom: 10px;
+			
+		}
+		
+		.comment ul {
+			padding-left: 0px;
+			margin-bottom: 0px;
+		}
+		
+		.comment li {
+		
+			font-size: 20px;
+			
+			list-style-type: none;
+			
+			display: inline-block;
+		}
+		
+		.comment-text {
+			margin-top: 0px;
+			font-size: 14px;
+		}
+		
+		.comment button {
+			margin-left: 4px;
+			margin-right: 20px;
+			
+			font-size: 14px;
+			
+			background-color: white;
+			border: 1px solid #6f6a84;
+			padding: 4px;
+		}
+		
+		.comment button:hover {
+			background-color: #f9f967;
+		}
+		
+		.comment a {
+			font-size: 10px;
+			
+			color: #c9c8d9;
+		}
+		
+		.commentator-name {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		
+		.date {
+			font-size: 14px;
+			color: #c9c8d9;
+		}
+		
+		.comment-mark {
+			font-size: 14px;
+			color: #c9c8d9;
+		}
+		
+		li .avatar {
+			width: 30px;
+		}
+		
+		li .like {
+			width: 20px;
+		}
+		
+		#my-comment {
+			margin-left: 20px;
+		}
+		
+		#my-comment textarea {
+			max-width: 480px;
+			width: 480px;
+			height: 70px;
+		}
+		
+		th:hover {
+			background-color: #f9f967;
+		}
+		
+		#my-comment .send {
+			margin-left: 380px;
+			height: 30px;
+			background-color: white;
+			border: 1px solid #6f6a84;
+			padding: 4px;
+		}
+		
+		#my-comment .send:hover {
+			background-color: #f9f967;
+		}
+		
+		.more {
+			width: 480px;
+			background-color: white;
+			border: 1px solid #6f6a84;
+			padding: 10px;
+		}
+		
+		.more:hover {
+			background-color: #f9f967;
+		}
+		
+	</style>
+	
+	<body>
+		<header>
+			<hr>
+				<ul>
+					<a class="selected" href=""><li>Мои организации</a></li>
+					<a href=""><li>Заявки на изменения</li></a>
+					<a href=""><li>Мои заказы</a></li></a>
+				</ul>
+			<hr>
+		</header>
+		
+		<div id="main-info-block">
+			<div class="info">
+			<ul>
+				<li>
+					<p class="name">Кафе Гладиатор</p>
+				</li>	
+				<li>
+					<img src="img/location.jpg" class="location"><a href="">Страница на картах</a>
+				</li>	
+			</ul>
+			</div>
+			<div class="info-block">
+				<table> 
+
+					<tr> 
+					<th><a href="#">Информация</th> 
+					<th><a href="#">Услуги</th> 
+					<th><a href="#">Фото</th> 
+					<th class="selected"><a href="#">Отзывы</th> 
+					<th><a href="#">Статистика</th> 
+					</tr> 
+
+				</table>
+			</div>
+			
+			<div class="comments">
+				<p class="count">12 отзывов об этой организации<p class="mark">9.8</p></p>
+				
+				<div class="comment">
+					<ul>
+						<li><img class="avatar" src="img/avatar.png"></li>
+						<li class="lei"><p class="commentator-name">Василий Привалов</p></li>
+						<li><p class="date">4 апреля 2016</p></li>
+						<li><p class="comment-mark">оценка:</p></li>
+						<li><img class="like" src="img/like.png"></li>
+					</ul>
+					<p class="comment-text">
+						Очень давно знаю это место буквально со дня открытия и для нашей
+						семьи в особенности ребенка, оно стало самым любимым. Здесь рай
+						не только для взрослых по части вкусной итальянской кухни изменения
+						романтики.
+					</p>
+					<button>Ответить</button>
+					<button>Пожаловаться</button>
+					<a href="">Ссылка на отзыв</a>
+				</div>
+				
+				<div class="comment">
+					<ul>
+						<li><img class="avatar" src="img/avatar.png"></li>
+						<li><p class="commentator-name">Илья Пряников</p></li>
+						<li><p class="date">9 мая 2016</p></li>
+						<li><p class="comment-mark>оценка:</p></li>
+						<li><img class="like" src="img/like.png"></li>
+					</ul>
+					<p class="comment-text">
+						Удивительно, хорошее место. Кухня на высоте. Интеръер крайне приятный,
+						играет рояль каждый раз и для деток проводят мастер-классы. На радость
+						родителям - бесплатно!
+					</p>
+					<button>Ответить</button>
+					<button>Пожаловаться</button>
+					<a href="">Ссылка на отзыв</a>
+				</div>
+				
+				<div class="comment">
+					<ul>
+						<li><img class="avatar" src="img/avatar.png"></li>
+						<li><p class="commentator-name">Лидия Никарагуа</p></li>
+						<li><p class="date">23 октября 2016</p></li>
+						<li><p class="comment-mark>оценка:</p></li>
+						<li><img class="like" src="img/dislike.png"></li>
+					</ul>
+					<p class="comment-text">
+						Не понравилось. На Белорусской и Пролетарской как то поуютнее,
+						обстановка поприятнее. Маленький выбор пива, а цена на него большая.
+						Лёффе 0.33 290р!!! Не очень понравилась еда. Брали фирменные бургеры.
+						Мясо было пересоленное и переперченное. Плюс какое то слишком жирное.
+						В итоге, просуммировав все, считаю, что при нынешнем уровне качества
+						заведения цены на еду и напитки должны быть ниже.
+					</p>
+					<button>Ответить</button>
+					<button>Пожаловаться</button>
+					<a href="">Ссылка на отзыв</a>
+				</div>
+			</div>
+			
+			<div id="my-comment">
+				<p>Напишите ответ на отзыв</p>
+				<textarea></textarea>
+				<p><button class="send">Опубликовать</button><p>
+				<p><button class="more">Все 134 отзыва</button></p>
+			</div>
+		</div>
+	</body>
+</html>
